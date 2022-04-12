@@ -1,0 +1,289 @@
+
+$left-text: #fff;
+$bar-color: rgb(0, 17, 255);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: $left-text;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+.left-Side {
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+.textProfile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    h2 {
+        color: $left-text;
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-align: center;
+       // text-transform: uppercase;
+        font-weight: 600;
+        line-height: 1.4em;
+    }
+    span {
+        font-size: 0.8em;
+        font-weight: 300;
+    }
+}
+
+.textProfile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-detail {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.25rem;
+
+    .R1{
+        display: inline-flex;
+    }
+    .R2 {
+        display: inline-flex;
+    }
+
+    h4 {
+        color: $left-text;
+    }
+    p {
+        padding-left: 0.3125rem;
+        color: $left-text;
+
+    }
+}
+
+.profile-Contant {
+    padding-top: 1.25rem;
+    
+    h3 {
+        color: $left-text;
+        text-transform: uppercase; 
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 1.25rem;
+    }
+
+    ul {
+        position: relative;
+    }
+
+    li {
+        position: relative;
+        list-style: none;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    a {
+       text-decoration: none;
+        color: $left-text;
+   }
+
+   ion-icon {
+       display: inline-block;
+       width: 1.875rem;
+       font-size: 1.125rem;
+       color: #03a9f4;
+   }
+
+   .map {
+       cursor: default;
+   }
+}
+
+
+.right-side {
+    position: relative;
+    background: #fff;
+    padding: 2.5rem;
+    
+}
+
+.education {
+
+    h2 {
+        line-height: 2.125rem;
+    }
+
+
+    h5 {
+        padding-top: 0.625rem;
+        color: $bar-color;
+        line-height: 1.1875rem;
+        font-weight: 500;
+    }
+    
+    h4 {
+        color: rgba(20, 13, 13, 0.616);
+        font-weight: 300;
+        line-height: 1.4375rem;
+}
+    h4:nth-child(2) {
+        color: rgba(13, 13, 17, 0.863);
+        font-weight: 500;
+    }
+
+
+    li {
+        list-style: none;
+    }
+
+    .dot1::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $bar-color;
+    top: 109.5px;
+    left: 24px;
+    z-index: 1;
+    }
+
+    .dot2::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $bar-color;
+    top: 185.2px;
+    left: 24px;
+    z-index: 1;
+    }
+
+    .dot3::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $bar-color;
+    top: 258.5px;
+    left: 24px;
+    z-index: 1;
+    }
+
+
+        
+}
+
+.education::after {
+    content: '';
+    position: absolute;
+    min-height: 200px;
+    border: 2px solid;
+    color: $bar-color;
+    top: 90px;
+    left: 27px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.language {
+    margin-top: 2.5rem;
+
+    h4 {
+        padding-top: 0.625rem;
+    }
+
+    li {
+        margin-top: 0.625rem;
+    }
+
+    .text {
+        width: 5rem;
+    }
+}
+
+
+.language .percent {
+    position: relative;
+    width: 10%;
+    height: 6px;
+    margin-top: 9px;
+    background-color: $bar-color;
+    display: block;
+    margin-left: 8px;
+    border-radius: 10px;
+}
+
+.language .percent-1 {
+    position: relative;
+    width: 10%;
+    height: 6px;
+    margin-top: 9px;
+    background-color: rgba(146, 148, 150, 0.705);
+    display: block;
+    margin-left: 8px;
+    border-radius: 10px;
+}
+
+.skills {
+    margin-top: 2.5rem;
+    li{
+        text-decoration: none;
+        list-style: none;
+        padding-top: 0.625rem;
+    }
+    
+
+    .percent {
+        display: block;
+        height: 0.875rem;
+        background-color: rgba(146, 148, 150, 0.705);
+        border-radius: 3px;
+    }
+
+    .skill-per {
+        height: 0.875rem;
+        background-color: $bar-color;
+    }
+}
+
+.Rskill {
+    margin-top: 2.5rem;
+}
+
+
+@media (max-width: 1000px) {
+    .container {
+        margin: 0.625rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+}

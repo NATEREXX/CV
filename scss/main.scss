@@ -1,0 +1,542 @@
+// Premenne
+
+$mainColor: #fff;
+$bgkColor: rgb(34, 34, 34);
+$bgHeadColor:rgb(67, 48, 156);
+$bgDiagonal: rgb(226, 59, 115);
+$bgFristBoxsColor: rgb(0, 0, 0); //boxy html css a JS
+$BorBoxColorI: rgb(241, 101, 41);   //farba orámovania prvého boxu (HTML)
+$BorBoxColorII: rgb(41, 101, 241);          //farba orámovania druhého boxu (CSS)
+$BorBoxColorIII: rgb(247, 223, 30);         //farba orámovania tretieho boxu (JS)
+$BgCardI: linear-gradient(45deg,#3503ad,#f7308c); //farba pozadia 1 karty (osobné údaje)
+//$BgCardII: linear-gradient(45deg,#2193b0,#6dd5ed);  //farba pozadia 2 karty 
+$BgCardII: linear-gradient(45deg,#4568dc,#b06ab3);  //farba pozadia 2 karty 
+$BgCardIII: linear-gradient(45deg,#e31e63,#ffeb3b); //farba pozadia 3 karty 
+$BgCardIV: linear-gradient(45deg,#3503ad,#f7308c); //farba pozadia 4 karty 
+$BgCardV: linear-gradient(45deg,#e31e63,#ffeb3b); //farba pozadia 5 karty 
+$BgFooter: rgb(27, 27, 27);
+$cardsH2Fsize: 2rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: $bgkColor;
+  min-height: 150vh;
+}
+
+//slide
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; }
+
+
+#side1::after {
+  content: '';
+  background: #D1A71D;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(99% 0, 100% 0, 0 100%, 0 99%); }
+
+#side2::after {
+  content: '';
+  background: #D1A71D;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 0, 100% 1%, 1% 100%, 0 100%);
+
+}
+
+#side1::before {
+  content: 'C';
+  position: absolute;
+  font-size: 30em;
+  width: 50%;
+  top: 7%;
+  left: 21%;
+  color: #fff; }
+
+#side2::before {
+  content: 'V';
+  position: absolute;
+  font-size: 30em;
+  top: 50%;
+  right: 25%;
+  color: #fff; }
+
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #042284; }
+
+#side1 {
+  clip-path: polygon(100% 0, 0 100%, 0 0);
+
+}
+
+#side2 {
+  clip-path: polygon(100% 0, 0 100%, 100% 100%); }
+
+
+
+
+// page1 obsah
+section {
+  background: $bgkColor;
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.content {
+  color: $mainColor;
+  padding: 50px;
+  padding-top: 160vh; 
+}
+
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.face {
+  border-radius: 50%;
+}
+
+.lad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// sekcia Programovacých jazykov html,css,JS
+.contentBox {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.kontainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+
+}
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $mainColor;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, transparent,rgba(0,0,0,0.2));
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #fff;
+  background: $bgFristBoxsColor;
+  filter: url(#wavy);
+}
+
+.box1::before {
+  border: 4px solid $BorBoxColorI;
+}
+.box2::before {
+  border: 4px solid $BorBoxColorII;
+}
+.box3::before {
+  border: 4px solid $BorBoxColorIII;
+}
+
+.inBox {
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  margin-left: 20px;
+      h2 {
+          text-transform: uppercase;
+          font-size: $cardsH2Fsize;
+          padding-bottom: 1rem;
+      }
+      p {
+        font-size: 1em;
+        font-family: Lora;
+      }
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+.box:hover::before {
+  transition: 0.5s;
+}
+.box1:hover::before {
+  background: url(../img/HTML.png);
+}
+.box2:hover::before {
+  background: url(../img/CSS.png);
+}
+.box3:hover::before {
+  background: url(../img/JS.png);
+}
+.box:hover {
+  color: $bgFristBoxsColor;
+}
+
+///pgae 2
+.page2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  background: $bgkColor;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nadpis2 {
+  margin-top: 1em;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $mainColor;
+}
+
+.cards {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.cards:nth-child(1),
+.container .cards:nth-child(1) .overlay {
+  background: $BgCardI;
+}
+.container .cards:nth-child(2),
+.container .cards:nth-child(2) .overlay {
+  background: $BgCardII;
+}
+.container .cards:nth-child(3),
+.container .cards:nth-child(3) .overlay {
+  background: $BgCardIII;
+}
+.container .cards:nth-child(4),
+.container .cards:nth-child(4) .overlay {
+  background: $BgCardIV;
+}
+.cards:nth-child(6),
+.container .cards:nth-child(6) .overlay {
+  background: $BgCardV;
+}
+
+.imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgBx h2 {
+  margin: 10px 10px;
+  padding: 0;
+  color: $mainColor;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: $cardsH2Fsize;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: $mainColor;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0,5s;
+}
+
+.overlay:hover {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  opacity: 0.9;
+  border-radius: 0;
+}
+
+.overlay::before {
+  content: 'viac';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: $mainColor;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay:hover::before{
+  display: none;
+  transition-delay: 0s;
+}
+
+.kontent {
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0s;
+  color: $mainColor;
+  h3 {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+  p {
+    padding-bottom: 0.7rem;
+  }
+}
+
+.overlay:hover ~ .kontent {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.2s;
+  transition-delay: 0.5;
+}
+
+.button {
+  width: 15.625rem;
+  height: 5rem;
+  display: flex;
+  background: $BgCardII;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 25px 0 25px;
+  text-transform: uppercase;
+
+  a  {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $mainColor;
+    text-decoration: none;
+  }   
+}
+
+.button:hover {
+  background: linear-gradient(90deg, rgba(195,34,193,1) 2%, rgba(255,186,0,1) 98%);
+}
+
+//footer
+footer {
+  text-align: center;
+  background-color: $BgFooter;
+  color: $mainColor;
+  padding-top: 2em;
+    p {
+      padding-bottom: 1rem;
+    }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+    p {
+        padding: 1rem;
+        padding-right: 1.5em;
+
+       a { color: $mainColor;}
+      }
+}
+
+.copyright {
+font-size: 13px;
+color: lighten($bgkColor, $amount: 20%)
+}
+
+
+@media (max-width: 1030px) {
+  .container {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .content {
+    padding-top: 132vh; }
+
+
+  .imgBx h2 {
+    font-size: 1.8rem;
+  }
+
+  .overlay {
+    bottom: 14px;
+  }
+
+  .cards {
+      width: 300px;
+      height: 320px;
+      flex-direction: column;
+      margin: 1em;
+
+  }
+
+  .button {
+    order: 6;
+    margin: 1em;
+  }
+
+}
+
+@media (max-width: 840px) {
+  
+  #side1::before {
+    font-size: 20em;
+  }
+
+  #side2::before {
+    font-size: 20em;
+    right: 18%;
+  }
+
+  .content {
+    padding-top: 120vh;
+
+    h3 {
+      text-align: center;
+      margin: 0.8em;
+    }
+  }
+  .lad {
+    flex-direction: column;
+  }
+}
+  
+
+
+@media (max-width: 570px) {
+
+
+  #side1::before {
+    font-size: 15em;
+  }
+
+  #side2::before {
+    font-size: 15em;
+    top: 60%;
+    right: 18%;
+  }
+
+
+.lad {
+  flex-direction: column;
+}
+  .content {
+    padding: 14px;
+    padding-top: 100vh;
+      h3 {
+      text-align: center;
+        margin: 0.8em;
+      }
+  }
+
+.nadpis2 {
+  font-size: 2.3em;
+}
+
+footer {
+    h3 {
+    padding-bottom: 1rem;
+    }
+    p {
+      padding-top: 0.5rem;
+    }
+}
+
+.footer-content {
+  flex-direction: column;
+    p {
+      padding: 0.4rem;
+    }
+}
+
+}
